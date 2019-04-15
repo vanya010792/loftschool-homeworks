@@ -4,7 +4,8 @@ import bondImg from './assets/bond_approve.jpg'
 import FormInput from './FormInput/FormInput'
 import FormData from './FormData/FormData'
 
-const FormDataLen = FormData.length
+const formData = [ ...FormData ]
+const formDataLen = formData.length
 
 class Form extends Component {
     state = {
@@ -23,14 +24,14 @@ class Form extends Component {
     }
     formSubmit = e => {
         e.preventDefault()
-        for ( let a = 0; a < FormDataLen; a++ ) {
-            let inputName = FormData[a].htmlFor + 'Value'
-            let inputValid = FormData[a].htmlFor + 'Valid'
+        for ( let a = 0; a < formDataLen; a++ ) {
+            let inputName = formData[a].htmlFor + 'Value'
+            let inputValid = formData[a].htmlFor + 'Valid'
             if( this.state[ inputName ] === '' ) {
                 this.setState({
                     [ inputValid ]: 0
                 })
-            } else if ( this.state[ inputName ] !== this.state.successValue[ FormData[a].htmlFor ] ) {
+            } else if ( this.state[ inputName ] !== this.state.successValue[ formData[a].htmlFor ] ) {
                 this.setState({
                     [ inputValid ]: 1
                 })
@@ -40,8 +41,8 @@ class Form extends Component {
                 })
             }
         }
-        for( let a = 0; a < FormDataLen; a++ ) {
-            let inputName = FormData[a].htmlFor + 'Valid'
+        for( let a = 0; a < formDataLen; a++ ) {
+            let inputName = formData[a].htmlFor + 'Valid'
             if ( this.state[ inputName ] !== 2 ) {
                 return false
             }
@@ -51,8 +52,8 @@ class Form extends Component {
         })
     }
     inputValue = e => {
-        for( let a = 0; a < FormDataLen; a++ ) {
-            let inputValid = FormData[a].htmlFor + 'Valid'
+        for( let a = 0; a < formDataLen; a++ ) {
+            let inputValid = formData[a].htmlFor + 'Valid'
             if( this.state[ inputValid ] !== 2 ) {
                 this.setState({
                     [ inputValid ]: ''
@@ -83,7 +84,7 @@ class Form extends Component {
                     : <form className="form" onSubmit={this.formSubmit}>
                         <h1>Введите свои данные, агент</h1>
                         {
-                            FormData.map(item => {
+                            formData.map(item => {
                                 let inputVal = item.htmlFor + 'Value'
                                 let inputValid = item.htmlFor + 'Valid'
                                 return (
