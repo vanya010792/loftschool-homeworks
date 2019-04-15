@@ -67,7 +67,9 @@ class App extends PureComponent {
             </div>
           ))}
         </div>
-        <Show showId={selectedShow} />
+        <Show
+            showId={selectedShow}
+        />
       </div>
     );
   }
