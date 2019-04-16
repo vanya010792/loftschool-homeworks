@@ -34,7 +34,7 @@ class Show extends Component {
             summary
         } = this.state.data
         if(summary) {
-            console.log(summary)
+            console.log( summary.substring( 3, summary.length - 4 ) )
         }
         return(
             <React.Fragment>
@@ -53,12 +53,12 @@ class Show extends Component {
                             <p className="show-text t-show-genre">
                                 <b>Жанр: </b>
                                 {
-                                    genres.map( item => item + ' ' )
+                                    genres.map( item => item + ', ' )
                                 }
                             </p>
                             <p
                                 className="show-text t-show-summary"
-                                dangerouslySetInnerHTML={{__html: summary}}
+                                dangerouslySetInnerHTML={{__html: summary.substring( 3, summary.length - 4 ) }}
                             >
                             </p>
                         </div>
