@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e77e3b2-f230-4c05-96f7-a31dac20dc55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Show/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Show/Show.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +21,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/App/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
+                <state relative-caret-position="857">
+                  <caret line="70" column="30" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -30,8 +30,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/Show/Show.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+                <state relative-caret-position="576">
+                  <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -55,8 +55,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/Show/Show.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="13" column="32" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="32" />
+                <state relative-caret-position="528">
+                  <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -179,17 +179,18 @@
       <workItem from="1555337591026" duration="2016000" />
       <workItem from="1555349524508" duration="4584000" />
       <workItem from="1555357857819" duration="4068000" />
+      <workItem from="1555401345136" duration="8221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25243000" />
+    <option name="totallyTimeSpent" value="33464000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17175975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,8 +254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
+        <state relative-caret-position="857">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -267,8 +268,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Show/Show.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="528">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -277,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Show/Show.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="576">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

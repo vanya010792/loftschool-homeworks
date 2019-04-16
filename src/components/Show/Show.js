@@ -7,34 +7,61 @@ class Show extends Component {
         showId: '',
         data: []
     }
-    // static getDerivedStateFromProps( props, state ) {
-    //     if( props.showId.length > 0 ) {
-    //         console.log(props, state)
-    //     }
-    //     return null
-    // }
-    // componentDidUpdate() {
-    //     console.log(1)
-    // }
-
+    componentDidUpdate( prevProps ) {
+        if( prevProps.showId !== this.props.showId ) {
+            let showId = this.props.showId
+            getShowInfo( showId ).then( resp => {
+                let data = {
+                    name: resp.name,
+                    genres: resp.genres,
+                    summary: resp.summary,
+                    img: resp.image.original
+                }
+                this.setState({
+                    showId,
+                    data
+                })
+            })
+        } else {
+            return false
+        }
+    }
     render() {
-        const propsShowId = this.props.showId
-        console.log(propsShowId)
-        // console.log('render', this.state.showId)
-        // console.log('data', this.state.data)
-        // if( this.props.showId ) {
-        //     this.setState({
-        //         showId: this.props.showId
-        //     })
-        // }
-        // console.log(this.state.showId)
+        const {
+            name,
+            img,
+            genres,
+            summary
+        } = this.state.data
+        if(summary) {
+            console.log(summary)
+        }
         return(
             <React.Fragment>
                 {
-                    !!propsShowId
-                    ? <div className="show">
-                        <h1>Шоу выбрано { this.props.showId }</h1>
-                      </div>
+                    this.state.showId.length > 0
+                    ?
+                        <div className="show">
+                            <img
+                                className="show-image"
+                                src={ img }
+                                alt="House"
+                            />
+                            <h2 className="show-label t-show-name">
+                                { name }
+                            </h2>
+                            <p className="show-text t-show-genre">
+                                <b>Жанр: </b>
+                                {
+                                    genres.map( item => item + ' ' )
+                                }
+                            </p>
+                            <p
+                                className="show-text t-show-summary"
+                                dangerouslySetInnerHTML={{__html: summary}}
+                            >
+                            </p>
+                        </div>
                     : <p className='show-inforation t-show-info'>Шоу не выбрано</p>
                 }
             </React.Fragment>
