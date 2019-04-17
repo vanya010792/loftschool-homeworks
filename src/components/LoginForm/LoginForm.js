@@ -62,11 +62,9 @@ class LoginForm extends PureComponent {
             />
           </p>
         ))}
-
         {authorizeError !== '' && (
           <p className="login-form-error t-login-error">{authorizeError}</p>
         )}
-
         <div className="login-form__buttons">
           <Button onClick={this.handleSubmit} className="t-login">
             Войти
