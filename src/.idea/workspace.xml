@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e77e3b2-f230-4c05-96f7-a31dac20dc55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Show/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Show/Show.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,7 +21,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/App/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="857">
+                <state relative-caret-position="1512">
                   <caret line="70" column="30" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
                 </state>
               </provider>
@@ -30,7 +31,7 @@
             <entry file="file://$PROJECT_DIR$/components/Show/Show.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="384">
-                  <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+                  <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -55,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/../cypress/integration/homework.spec.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="576">
-                  <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="190" />
+                  <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="190" />
                 </state>
               </provider>
             </entry>
@@ -96,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,7 +133,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,12 +167,13 @@
       <workItem from="1555337591026" duration="2016000" />
       <workItem from="1555349524508" duration="4584000" />
       <workItem from="1555357857819" duration="4068000" />
-      <workItem from="1555401345136" duration="9345000" />
+      <workItem from="1555401345136" duration="9836000" />
+      <workItem from="1555485581587" duration="110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34588000" />
+    <option name="totallyTimeSpent" value="35189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -232,9 +234,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/Show/Show.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
+        <state relative-caret-position="1512">
           <caret line="70" column="30" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="30" />
         </state>
       </provider>
@@ -246,27 +258,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Show/Show.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../cypress/integration/homework.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="190" />
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="190" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Show/Show.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

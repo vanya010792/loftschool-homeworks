@@ -53,7 +53,7 @@ class Show extends Component {
                             <p className="show-text t-show-genre">
                                 <b>Жанр: </b>
                                 {
-                                    genres.map( item => item + ', ' )
+                                    genres.join(', ')
                                 }
                             </p>
                             <p
