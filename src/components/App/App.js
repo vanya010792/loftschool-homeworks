@@ -8,7 +8,7 @@ import { AuthProvider, AuthConsumer } from '../../contexts/Auth/Auth'
 
 class App extends PureComponent {
   render() {
-      { console.log('authconsumer', this.props) }
+      console.log('authconsumer', this.props)
     return (
       <AuthProvider>
         <Layout header={Header} footer={Footer}>
@@ -18,7 +18,7 @@ class App extends PureComponent {
                 <Congratulations />
               ) : (
                 <LoginForm
-                  authorize={authorize}
+                  authorize={ authorize }
                   authorizeError={authorizeError}
                 />
               )

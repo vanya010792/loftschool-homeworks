@@ -40,9 +40,12 @@ class AuthProvider extends PureComponent {
     const { children } = this.props;
     return (
       <Provider
-        isAuthorized={ this.state.isAuthorized }
-        authorize={ this.authorize }
-        authorizeError={ this.state.authorizeError }
+          value='
+            isAuthorized={ this.state.isAuthorized },
+            authorize={ this.authorize },
+            authorizeError={ this.state.authorizeError }
+          '
+
       >
         { children }
       </Provider>
