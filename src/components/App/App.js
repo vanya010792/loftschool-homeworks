@@ -11,18 +11,18 @@ class App extends PureComponent {
     return (
       <AuthProvider>
         <Layout header={Header} footer={Footer}>
-          {/*<AuthConsumer>*/}
-            {/*{({ isAuthorized, authorize, authorizeError }) =>*/}
-              {/*isAuthorized ? (*/}
-                {/*<Congratulations />*/}
-              {/*) : (*/}
-                {/*<LoginForm*/}
-                  {/*authorize={authorize}*/}
-                  {/*authorizeError={authorizeError}*/}
-                {/*/>*/}
-              {/*)*/}
-            {/*}*/}
-          {/*</AuthConsumer>*/}
+          <AuthConsumer>
+            {({ isAuthorized, authorize, authorizeError }) =>
+              isAuthorized ? (
+                <Congratulations />
+              ) : (
+                <LoginForm
+                  authorize={authorize}
+                  authorizeError={authorizeError}
+                />
+              )
+            }
+          </AuthConsumer>
         </Layout>
       </AuthProvider>
     );
