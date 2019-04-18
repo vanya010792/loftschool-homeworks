@@ -4,16 +4,17 @@ import Footer from '../Footer'
 import Header from '../Header'
 import LoginForm from '../LoginForm'
 import Congratulations from '../Congratulations'
-import { AuthProvider, AuthConsumer } from '../../contexts/Auth'
+import { AuthProvider, AuthConsumer } from '../../contexts/Auth/Auth'
 
 class App extends PureComponent {
   render() {
+      { console.log('authconsumer', this.props) }
     return (
       <AuthProvider>
         <Layout header={Header} footer={Footer}>
           <AuthConsumer>
             {({ isAuthorized, authorize, authorizeError }) =>
-              isAuthorized ? (
+                isAuthorized ? (
                 <Congratulations />
               ) : (
                 <LoginForm

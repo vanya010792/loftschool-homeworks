@@ -15,7 +15,7 @@ class Layout extends PureComponent {
           { this.renderHeader( header ) }
           <main className={ `main` }>
             <SectionTitle />
-            {/*{ children }*/}
+            { children }
           </main>
           {/*{ this.renderFooter( footer ) }*/}
         </Fragment>
