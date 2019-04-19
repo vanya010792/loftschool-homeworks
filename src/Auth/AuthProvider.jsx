@@ -5,7 +5,7 @@ const { Provider, Consumer: AuthConsumer } = React.createContext()
 class AuthProvider extends Component {
     state = {
         email: '',
-        isAuthorized: true
+        isAuthorized: false
     }
     logout = () => {
         this.setState({
