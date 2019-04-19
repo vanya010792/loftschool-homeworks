@@ -6,7 +6,7 @@ class Button extends PureComponent {
     const { className, children, ...rest } = this.props;
     return (
       <button {...rest} className={`${className} button`}>
-        {children}
+        { children }
       </button>
     );
   }

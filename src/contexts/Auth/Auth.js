@@ -9,7 +9,7 @@ class AuthProvider extends PureComponent {
     isAuthorized: false
   }
   authorize = ( email, password ) => {
-    if( email === 'stu@dent.com' && password === 123 ) {
+    if( email === 'stu@dent.com' && +password === 123 ) {
       this.setState({
         isAuthorized: !this.state.isAuthorized,
         email,
@@ -36,15 +36,16 @@ class AuthProvider extends PureComponent {
     }
   }
   render() {
-    console.log( 'auth', this.props )
     const { children } = this.props;
     return (
       <Provider
-          value='
-            isAuthorized={ this.state.isAuthorized },
-            authorize={ this.authorize },
-            authorizeError={ this.state.authorizeError }
-          '
+        value={{
+          authorizeError: this.state.authorizeError,
+          isAuthorized: this.state.isAuthorized,
+          authorize: this.authorize,
+          email: this.state.email,
+          logout: this.logout
+        }}
 
       >
         { children }
