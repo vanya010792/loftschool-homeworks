@@ -8,31 +8,77 @@ class Todo extends PureComponent {
     inputValue: ''
   };
 
-  getId() {
-    const { savedData } = this.props;
-    const biggest = savedData.reduce((acc, el) => Math.max(acc, el.id), 0);
-    return biggest + 1;
+  // getId() {
+  //   const { savedData } = this.props;
+  //   console.log( 'getId savedData', savedData )
+  //   const biggest = savedData.reduce((acc, el) => Math.max(acc, el.id), 0);
+  //   return biggest + 1;
+  //   console.log( 'getId biggest', biggest )
+  // }
+
+  handleChange = event => {
+    this.setState({
+      inputValue: event.target.value
+    })
   }
 
-  handleChange = event => {};
+  createNewRecordByEnter = event => {
+    console.log( 'createNewRecordByEnter', event.target )
+  }
 
-  createNewRecordByEnter = event => {};
+  toggleRecordComplete = event => {
+    console.log( 'toggleRecordComplete', event.target )
+  }
 
-  toggleRecordComplete = event => {};
-
-  createNewRecord = () => {};
+  createNewRecord = () => {
+    // const getIdMe = this.getId()
+    // console.log( 'createNewRecord', getIdMe )
+    const saveData = this.state.inputValue
+    console.log( saveData )
+    return saveData
+  }
 
   render() {
-    return;
+    return(
+      <Card
+        children={ this.renderEmptyRecord() }
+        title={ 'Список дел' }
+      />
+    )
   }
 
   renderEmptyRecord() {
-    return;
+    const {
+      savedData,
+      saveData
+    } = this.props
+    return(
+      <div className="todo t-todo-list">
+        <div className="todo-item todo-item-new">
+          <input
+            className="todo-input t-input"
+            placeholder="Введите задачу"
+            value={ this.state.inputValue }
+            onChange={ this.handleChange }
+          />
+          <span
+              className="plus t-plus"
+              onClick={ this.createNewRecord }
+          >+</span>
+        </div>
+        { this.renderRecord( saveData ) }
+      </div>
+    )
   }
 
   renderRecord = record => {
-    return;
+    if( record ) {
+      console.log( 'record', record )
+    } else {
+      console.log('record else', record)
+    }
   };
 }
 
-export default withLocalstorage('todo-app', [])(Todo);
+export default withLocalstorage('todo-app', [])(Todo)
+// export default Todo
