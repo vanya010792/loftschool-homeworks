@@ -21,21 +21,23 @@ class Todo extends PureComponent {
       inputValue: event.target.value
     })
   }
-
   createNewRecordByEnter = event => {
     console.log( 'createNewRecordByEnter', event.target )
   }
-
   toggleRecordComplete = event => {
     console.log( 'toggleRecordComplete', event.target )
   }
 
   createNewRecord = () => {
+    console.log( this.props )
     // const getIdMe = this.getId()
     // console.log( 'createNewRecord', getIdMe )
     const saveData = this.state.inputValue
     console.log( saveData )
-    return saveData
+    withLocalstorage('todo-app', [ saveData ])(Todo)
+    this.setState({
+      inputValue: ''
+    })
   }
 
   render() {
@@ -52,6 +54,7 @@ class Todo extends PureComponent {
       savedData,
       saveData
     } = this.props
+    console.log( 'props Todo', saveData, this.props )
     return(
       <div className="todo t-todo-list">
         <div className="todo-item todo-item-new">
@@ -66,7 +69,7 @@ class Todo extends PureComponent {
               onClick={ this.createNewRecord }
           >+</span>
         </div>
-        { this.renderRecord( saveData ) }
+        { saveData ? this.renderRecord( saveData ) : this.renderRecord( savedData ) }
       </div>
     )
   }
@@ -81,4 +84,3 @@ class Todo extends PureComponent {
 }
 
 export default withLocalstorage('todo-app', [])(Todo)
-// export default Todo
