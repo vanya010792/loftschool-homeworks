@@ -5,7 +5,7 @@ function load(localStorageKey) {
   try {
     data = JSON.parse(stringData);
   } catch (e) {}
-  console.log( 'load', localStorageKey, data )
+  console.log( 'load', data )
   return data;
 }
 

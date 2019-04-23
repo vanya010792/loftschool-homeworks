@@ -1,7 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import Card from '../Card';
 import './Todo.css';
 import withLocalstorage from '../../HOCs/withLocalstorage';
+import {save} from "../../localstorage";
 
 class Todo extends PureComponent {
   state = {
@@ -10,33 +11,39 @@ class Todo extends PureComponent {
 
   // getId() {
   //   const { savedData } = this.props;
-  //   console.log( 'getId savedData', savedData )
   //   const biggest = savedData.reduce((acc, el) => Math.max(acc, el.id), 0);
   //   return biggest + 1;
-  //   console.log( 'getId biggest', biggest )
   // }
-
   handleChange = event => {
     this.setState({
       inputValue: event.target.value
     })
   }
-  createNewRecordByEnter = event => {
-    event.preventDefault()
-    this.createNewRecord()
+  createNewRecordByEnter = () => {
+    const { savedData } = this.props
+    const dataSave = this.state.inputValue
+    save( 'todo-app', [ dataSave ] )
+    const dataLoad = savedData( 'todo-app' )
+    const result = [ ...dataLoad, ...dataSave ]
+    // !!dataLoad ? result = [ ...dataLoad, ...dataSave ] : result = [ ...dataSave ]
     this.setState({
       inputValue: ''
     })
+    return result
   }
   toggleRecordComplete = event => {
     console.log( 'toggleRecordComplete', event.target )
   }
 
-  createNewRecord = () => {
-    const saveData = this.state.inputValue
-    withLocalstorage('todo-app', [ saveData ])(Todo)
-    console.log( 'createNewRecord', saveData )
-  }
+  // createNewRecord = () => {
+  //   const { saveData } = this.props
+  //   const data = [ this.state.inputValue ]
+  //   saveData( 'todo-app', data )
+  //   console.log( 'createNewRecord', saveData, data, window.localStorage )
+  //   this.setState({
+  //     inputValue: ''
+  //   })
+  // }
 
   render() {
     return(
@@ -48,10 +55,7 @@ class Todo extends PureComponent {
   }
 
   renderEmptyRecord() {
-    const {
-      savedData
-    } = this.props
-    console.log( 'props Todo', this.props )
+    const { savedData, saveData } = this.props
     return(
       <div className="todo t-todo-list">
         <div className="todo-item todo-item-new">
@@ -63,16 +67,39 @@ class Todo extends PureComponent {
           />
           <span
               className="plus t-plus"
+              // onClick={ this.createNewRecord }
               onClick={ this.createNewRecordByEnter }
           >+</span>
         </div>
-        { savedData ? this.renderRecord( savedData ) : null }
+        { this.renderRecord( this.renderEmptyRecord() ) }
       </div>
     )
   }
 
   renderRecord = record => {
-    console.log( 'record', record )
+    return(
+      <Fragment>
+        {
+          record.map( item => {
+            return(
+              <div
+                className="todo-item t-todo"
+                key={ item.index }
+              >
+                <p className="todo-item__text">{ item }</p>
+                <span
+                  className="todo-item__flag t-todo-complete-flag"
+                  data-todo-id={ item.index }
+                  onClick={ this.toggleRecordComplete }
+                >
+                  [  ]
+              </span>
+              </div>
+            )
+          })
+        }
+      </Fragment>
+    )
   };
 }
 
