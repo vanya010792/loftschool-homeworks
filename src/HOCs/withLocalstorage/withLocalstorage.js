@@ -7,7 +7,7 @@ const withLocalstorage = ( type, data ) => Todo => {
             save( type, data )
         }
         savedData = type => {
-            load( type )
+            return load( type )
         }
         render() {
             return(

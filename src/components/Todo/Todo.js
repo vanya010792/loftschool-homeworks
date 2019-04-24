@@ -20,30 +20,41 @@ class Todo extends PureComponent {
     })
   }
   createNewRecordByEnter = () => {
-    const { savedData } = this.props
-    const dataSave = this.state.inputValue
-    save( 'todo-app', [ dataSave ] )
+    const { savedData, saveData } = this.props
     const dataLoad = savedData( 'todo-app' )
+    const dataSave = this.state.inputValue
     const result = [ ...dataLoad, ...dataSave ]
-    // !!dataLoad ? result = [ ...dataLoad, ...dataSave ] : result = [ ...dataSave ]
+    saveData( 'todo-app', [ result ] )
     this.setState({
       inputValue: ''
     })
-    return result
   }
   toggleRecordComplete = event => {
     console.log( 'toggleRecordComplete', event.target )
   }
 
-  // createNewRecord = () => {
-  //   const { saveData } = this.props
-  //   const data = [ this.state.inputValue ]
-  //   saveData( 'todo-app', data )
-  //   console.log( 'createNewRecord', saveData, data, window.localStorage )
-  //   this.setState({
-  //     inputValue: ''
-  //   })
-  // }
+  createNewRecord = () => {
+    const { savedData } = this.props
+    const result = savedData( 'todo-app' )
+    return (
+      result.map( item => {
+        return(
+            <div
+                className="todo-item t-todo"
+                key={ item.index }
+            >
+              <p className="todo-item__text">{ item }</p>
+              <span
+                  className="todo-item__flag t-todo-complete-flag"
+                  data-todo-id={ item.index }
+              >
+                  [  ]
+              </span>
+            </div>
+        )
+      })
+    )
+  }
 
   render() {
     return(
@@ -55,7 +66,6 @@ class Todo extends PureComponent {
   }
 
   renderEmptyRecord() {
-    const { savedData, saveData } = this.props
     return(
       <div className="todo t-todo-list">
         <div className="todo-item todo-item-new">
@@ -71,33 +81,16 @@ class Todo extends PureComponent {
               onClick={ this.createNewRecordByEnter }
           >+</span>
         </div>
-        { this.renderRecord( this.renderEmptyRecord() ) }
+        { this.renderRecord( this.createNewRecord ) }
       </div>
     )
   }
 
   renderRecord = record => {
+    console.log( record )
     return(
       <Fragment>
-        {
-          record.map( item => {
-            return(
-              <div
-                className="todo-item t-todo"
-                key={ item.index }
-              >
-                <p className="todo-item__text">{ item }</p>
-                <span
-                  className="todo-item__flag t-todo-complete-flag"
-                  data-todo-id={ item.index }
-                  onClick={ this.toggleRecordComplete }
-                >
-                  [  ]
-              </span>
-              </div>
-            )
-          })
-        }
+        { record() }
       </Fragment>
     )
   };
