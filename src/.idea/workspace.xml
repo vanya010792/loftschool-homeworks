@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6cdf059-7966-47bb-8a58-94a05a03d1f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localstorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/localstorage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +22,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/Todo/Todo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-511">
-                  <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+                <state relative-caret-position="425">
+                  <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
                   <folding>
-                    <element signature="e#474#543#0" />
-                    <element signature="e#978#1039#0" />
+                    <marker date="1556116547894" expanded="true" signature="812:1084" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -43,15 +42,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/localstorage.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -59,8 +49,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+                <state relative-caret-position="240">
+                  <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -91,14 +81,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.test.js" />
-        <option value="$PROJECT_DIR$/localstorage.js" />
         <option value="$PROJECT_DIR$/components/Card/Card.css" />
         <option value="$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.js" />
+        <option value="$PROJECT_DIR$/localstorage.js" />
         <option value="$PROJECT_DIR$/components/Todo/Todo.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="16" />
     <option name="y" value="13" />
     <option name="width" value="1623" />
@@ -166,15 +156,15 @@
       <workItem from="1555922024022" duration="10223000" />
       <workItem from="1556004386711" duration="19280000" />
       <workItem from="1556027498303" duration="2899000" />
-      <workItem from="1556090693671" duration="3069000" />
+      <workItem from="1556090693671" duration="11746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35471000" />
+    <option name="totallyTimeSpent" value="44148000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
@@ -219,22 +209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Card/Card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/localstorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -252,10 +226,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/localstorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Card/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HOCs/withLocalstorage/withLocalstorage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="240">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -264,11 +254,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Todo/Todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-511">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="425">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
-            <element signature="e#474#543#0" />
-            <element signature="e#978#1039#0" />
+            <marker date="1556116547894" expanded="true" signature="812:1084" ph="..." />
           </folding>
         </state>
       </provider>
