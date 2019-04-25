@@ -30,14 +30,31 @@ class Todo extends PureComponent {
   //   const biggest = savedData.reduce((acc, el) => Math.max(acc, el.id), 0);
   //   return biggest + 1;
   // }
-  createNewRecordByEnter = () => {
-    const { saveData, savedData } = this.props
-    const dataLoad = savedData( 'todo-app' )
-    saveData( 'todo-app', [ ...dataLoad, this.state.inputValue ] )
-    this.createNewRecord()
-    this.setState({
-      inputValue: ''
-    })
+  createNewRecordByEnter = event => {
+    console.log( event.which )
+    if( event.which === 13 ) {
+      if( this.state.inputValue !== '' ) {
+        const {saveData, savedData} = this.props
+        const dataLoad = savedData('todo-app')
+        const dataLoadResult = dataLoad || ''
+        saveData('todo-app', [...dataLoadResult, this.state.inputValue])
+        this.createNewRecord()
+        this.setState({
+          inputValue: ''
+        })
+      }
+    } else if( event.target.innerHTML === '+' ) {
+      if( this.state.inputValue !== '' ) {
+        const {saveData, savedData} = this.props
+        const dataLoad = savedData('todo-app')
+        const dataLoadResult = dataLoad || ''
+        saveData('todo-app', [...dataLoadResult, this.state.inputValue])
+        this.createNewRecord()
+        this.setState({
+          inputValue: ''
+        })
+      }
+    }
   }
   createNewRecord = () => {
     const { savedData } = this.props
@@ -63,6 +80,7 @@ class Todo extends PureComponent {
             placeholder="Введите задачу"
             value={ this.state.inputValue }
             onChange={ this.handleChange }
+            onKeyUp={ this.createNewRecordByEnter }
           />
           <span
             className="plus t-plus"
