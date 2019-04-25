@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+// import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import PrivateRoute from '../PrivateRoute';
 import LoginForm from '../LoginForm';
 import AppRouter from '../AppRouter';
@@ -15,21 +15,27 @@ import { DataProvider } from '../../context/Data';
 export default () => (
   <DataProvider>
     <AuthProvider>
-      <BrowserRouter>
-        <Switch>
-          {/*
-            Добавьте роуты /app и /login.
-            Роут /app должен быть доступен 
-            только авторизованному пользователю,
-            используйте приватный роут.
-            По умолчанию должен происходить редирект
-            на страницу логина.
+      {/*<BrowserRouter>*/}
+        {/*<Switch>*/}
+          {/*/!**/}
+            {/*Добавьте роуты /app и /login.*/}
+            {/*Роут /app должен быть доступен */}
+            {/*только авторизованному пользователю,*/}
+            {/*используйте приватный роут.*/}
+            {/*По умолчанию должен происходить редирект*/}
+            {/*на страницу логина.*/}
 
-            /app будет использовать AppRouter в качестве вью
-            /login будет использовать LoginForm
-          */}
-        </Switch>
-      </BrowserRouter>
+            {/*/app будет использовать AppRouter в качестве вью*/}
+            {/*/login будет использовать LoginForm*/}
+          {/**!/*/}
+            <LoginForm/>
+            {/*{*/}
+                {/*this.props.isAuthorized*/}
+                {/*? null*/}
+                {/*: <LoginForm />*/}
+            {/*}*/}
+        {/*</Switch>*/}
+      {/*</BrowserRouter>*/}
     </AuthProvider>
   </DataProvider>
 );
