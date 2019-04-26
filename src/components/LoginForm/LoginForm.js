@@ -5,8 +5,9 @@
 // Когда пользователь авторизован - перенаправьте его на роут /app
 
 import React, { Component } from 'react'
-import './LoginForm.module.css'
+import classes from './LoginForm.module.css'
 import { withAuth } from '../../context/Auth/Auth'
+import { Redirect } from 'react-router-dom'
 
 const inputData = [
     {
@@ -35,22 +36,26 @@ class LoginForm extends Component {
         evt.preventDefault()
         const { authorize } = this.props
         authorize( this.state.emailValue, this.state.passwordValue )
+
     }
     render() {
         const { authError } = this.props
         return(
-            <div className='bg'>
-                <form action="" className="form">
+            <div className={ classes.bg }>
+                <form
+                    className={ classes.form }
+                    onSubmit={ this.handlerSubmit }
+                >
                     {
                         inputData.map( item => {
                             let nameState = item.name + 'Value'
                             return(
                                 <p key={ item.name }>
                                     <label htmlFor={ item.name }>
-                                        <span className="labelText">Почта</span>
+                                        <span className={ classes.labelText }>Почта</span>
                                     </label>
                                     <input
-                                        className="input"
+                                        className={ classes.input }
                                         type={ item.type }
                                         name={ item.name }
                                         value={ this.state[ nameState ]}
@@ -62,13 +67,12 @@ class LoginForm extends Component {
                     }
                     {
                         authError !== ''
-                        ? <p className='error'>{ authError }</p>
+                        ? <p className={ classes.error }>{ authError }</p>
                         : null
                     }
-                    <div className="buttons">
+                    <div className={ classes.buttons }>
                         <button
-                            className="button"
-                            onClick={ this.handlerSubmit }
+                            className={ classes.button }
                         >
                             Войти
                         </button>
