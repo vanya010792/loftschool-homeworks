@@ -6,7 +6,7 @@ class AuthProvider extends Component {
   password = '321';
 
   state = {
-    isAuthorized: false,
+    isAuthorized: true,
     authError: ''
   };
 

@@ -36,10 +36,9 @@ class LoginForm extends Component {
         evt.preventDefault()
         const { authorize } = this.props
         authorize( this.state.emailValue, this.state.passwordValue )
-
     }
     render() {
-        const { authError } = this.props
+        const { authError, isAuthorized } = this.props
         return(
             <div className={ classes.bg }>
                 <form
@@ -77,6 +76,11 @@ class LoginForm extends Component {
                             Войти
                         </button>
                     </div>
+                    {
+                        isAuthorized
+                        ? <Redirect from='/login' to='/app' />
+                        : null
+                    }
                 </form>
             </div>
         )
