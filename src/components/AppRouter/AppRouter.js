@@ -9,7 +9,7 @@
 
 // Так же в этом файле обьявите лейаут,
 // используйте стили из AppRouter.module.css
-import React from 'react'
+import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import Home from '../../components/Home'
 import InboxList from '../../components/InboxList'
@@ -71,8 +71,8 @@ export default ({ match }) => {
                     <Switch>
                         <Route path='/app/inbox/:id' component={ InboxMail } />
                         <Route path='/app/outbox/:id' component={ OutboxMail } />
-                        <Route path='/app/outbox' exact component={ OutboxList } />
-                        <Route path='/app/inbox' exact component={ InboxList } />
+                        <Route path='/app/outbox' component={ OutboxList } />
+                        <Route path='/app/inbox' component={ InboxList } />
                         <Route path='/app' exact component={ Home } />
                     </Switch>
                 </div>

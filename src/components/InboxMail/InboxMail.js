@@ -10,10 +10,10 @@ class InboxMail extends PureComponent {
       },
       data
     } = this.props;
-    const mail = data.inbox.find(mail => mail.id === id);
+    const mail = data.inbox.find( mail => mail.id === id );
 
     return <Mail {...mail} />;
   }
 }
 
-export default withData(InboxMail);
+export default withData( InboxMail );

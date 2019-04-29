@@ -8,7 +8,9 @@ import React, { Component } from 'react'
 class OutboxList extends Component {
     render() {
         return (
-            <h2>OutboxList</h2>
+            <div className={  }>
+
+            </div>
         )
     }
 }
