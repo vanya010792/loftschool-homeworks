@@ -3,16 +3,21 @@
 // Используйте HOC withData из `/context/Data` чтобы получить данные.
 
 // Этот компонент должен использовать MailList для отображения данных.
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react'
+import MailList from '../MailList'
+import { withData } from '../../context/Data'
 
-class InboxList extends Component {
+class InboxList extends PureComponent {
     render() {
+        const { data, match } = this.props
+        const cls = { list: 't-inbox-list', link: 't-inbox-link' }
         return (
-            <div>
-                Inbox List
-            </div>
-        );
+            <MailList
+                data={ data.inbox }
+                match={ match }
+                cls={ cls }
+            />
+        )
     }
 }
-
-export default InboxList;
+export default withData( InboxList )

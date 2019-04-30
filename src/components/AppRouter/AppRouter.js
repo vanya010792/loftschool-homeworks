@@ -21,15 +21,18 @@ import classes from './AppRouter.module.css'
 const names = [
         {
             path: '/app',
-            title: 'Home'
+            title: 'Home',
+            cls: 't-link-home'
         },
         {
             path: '/app/inbox',
-            title: 'Inbox'
+            title: 'Inbox',
+            cls: 't-link-inbox'
         },
         {
             path: '/app/outbox',
-            title: 'Outbox'
+            title: 'Outbox',
+            cls: 't-link-outbox'
         }
     ]
 
@@ -45,7 +48,7 @@ export default ({ match }) => {
         <div className={ classes.wrapper }>
             <div className={ classes.container }>
                 <nav className={ classes.nav }>
-                    <ul className={ classes.navList }>
+                    <ul className={ `${classes.navList} t-nav-list` }>
                         {
                             names.map( (item, index) => {
                                 return(
@@ -55,6 +58,7 @@ export default ({ match }) => {
                                     >
                                         <Link
                                             to={ item.path }
+                                            className={ item.cls }
                                         >
                                             { item.title }
                                         </Link>
