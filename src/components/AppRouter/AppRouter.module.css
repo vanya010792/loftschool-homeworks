@@ -28,7 +28,7 @@
 .navElement {
   line-height: 20px;
 }
-
+.active{}
 :global(.active).link {
   text-decoration: none;
   cursor: default;

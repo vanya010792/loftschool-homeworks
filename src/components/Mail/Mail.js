@@ -8,14 +8,14 @@ const Mail = props => {
     return(
         <div className={ classes.container }>
             {
-                !!props.from
+                !cls.from
                 ? <Fragment>
-                    <p className={ cls.to }>To: <b>{ props.from }</b></p>
-                    <p>{ props.body }</p>
+                    <p className={ cls.to }>To: <b>{ props.to }</b></p>
+                    <p className={ cls.body }>{ props.body }</p>
                   </Fragment>
                 : <Fragment>
-                    <p >From: <b>{ props.to }</b></p>
-                    <p>{ props.body }</p>
+                    <p className={ cls.from }>From: <b>{ props.from }</b></p>
+                    <p className={ cls.body }>{ props.body }</p>
                   </Fragment>
             }
         </div>

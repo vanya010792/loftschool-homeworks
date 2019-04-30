@@ -15,9 +15,13 @@ class OutboxMail extends PureComponent {
             },
             data
         } = this.props;
+        const cls = {
+            to: 't-mail-to',
+            body: 't-mail-body'
+        }
         const mail = data.outbox.find( mail => mail.id === id );
 
-        return <Mail {...mail} />;
+        return <Mail {...mail} cls={ cls } />;
     }
 }
 

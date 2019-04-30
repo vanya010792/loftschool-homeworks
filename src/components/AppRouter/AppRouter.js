@@ -9,8 +9,8 @@
 
 // Так же в этом файле обьявите лейаут,
 // используйте стили из AppRouter.module.css
-import React, { Component } from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route, NavLink } from 'react-router-dom'
 import Home from '../../components/Home'
 import InboxList from '../../components/InboxList'
 import InboxMail from '../../components/InboxMail'
@@ -56,13 +56,14 @@ export default ({ match }) => {
                                         className={ classes.navElement }
                                         key={ index }
                                     >
-                                        <Link
-                                            to={ item.path }
-                                            className={ item.cls }
+                                        <NavLink
+                                            exact
+                                            to={item.path}
+                                            className={`${item.cls} ${classes.link}`}
                                             activeClassName='active'
                                         >
-                                            { item.title }
-                                        </Link>
+                                            {item.title}
+                                        </NavLink>
                                     </li>
                                 )
                             })
@@ -78,7 +79,7 @@ export default ({ match }) => {
                         <Route path='/app/outbox/:id' component={ OutboxMail } />
                         <Route path='/app/outbox' component={ OutboxList } />
                         <Route path='/app/inbox' component={ InboxList } />
-                        <Route path='/app' exact component={ Home } />
+                        <Route path='/app' component={ Home } />
                     </Switch>
                 </div>
             </div>

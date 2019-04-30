@@ -15,7 +15,6 @@ class LoginForm extends Component {
         passwordValue: ''
     }
     handlerChangeInput = evt => {
-        console.log(evt.target.name)
         let nameInput = evt.target.name + 'Value'
         this.setState({
             [ nameInput ]: evt.target.value
