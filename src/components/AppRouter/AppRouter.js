@@ -59,6 +59,7 @@ export default ({ match }) => {
                                         <Link
                                             to={ item.path }
                                             className={ item.cls }
+                                            activeClassName='active'
                                         >
                                             { item.title }
                                         </Link>

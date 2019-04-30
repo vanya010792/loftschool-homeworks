@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25119ed-ed08-46d7-af96-f921c6eaece3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AppRouter/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AppRouter/AppRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InboxList/InboxList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/InboxList/InboxList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InboxMail/InboxMail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/InboxMail/InboxMail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Mail/Mail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Mail/Mail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MailList/MailList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailList/MailList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OutboxList/OutboxList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/OutboxList/OutboxList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OutboxMail/OutboxMail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/OutboxMail/OutboxMail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/context/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/context/Auth/Auth.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/context/Auth/Auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="-89">
               <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/AppRouter/AppRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="61" column="67" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#285#325#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,10 +98,10 @@
         <option value="$PROJECT_DIR$/components/MailList/MailList.js" />
         <option value="$PROJECT_DIR$/components/InboxList/InboxList.js" />
         <option value="$PROJECT_DIR$/components/OutboxList/OutboxList.js" />
-        <option value="$PROJECT_DIR$/components/AppRouter/AppRouter.js" />
         <option value="$PROJECT_DIR$/components/InboxMail/InboxMail.js" />
         <option value="$PROJECT_DIR$/components/Mail/Mail.js" />
         <option value="$PROJECT_DIR$/context/Auth/Auth.js" />
+        <option value="$PROJECT_DIR$/components/AppRouter/AppRouter.js" />
       </list>
     </option>
   </component>
@@ -126,6 +129,12 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AppRouter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
@@ -243,12 +252,12 @@
       <workItem from="1556448343884" duration="13928000" />
       <workItem from="1556522915598" duration="1618000" />
       <workItem from="1556524558930" duration="1176000" />
-      <workItem from="1556613366342" duration="7158000" />
+      <workItem from="1556613366342" duration="7283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42791000" />
+    <option name="totallyTimeSpent" value="42916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="562" y="35" width="1365" height="998" extended-state="0" />
@@ -400,17 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/AppRouter/AppRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#285#325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/MailList/MailList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -444,8 +442,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/context/Auth/Auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="-89">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/AppRouter/AppRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="61" column="67" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#285#325#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
