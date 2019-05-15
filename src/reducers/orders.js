@@ -27,7 +27,7 @@ export default (state = [], action) => {
         switch ( position ) {
             case 'clients':
                 return {
-                    state,
+                    ...state,
                     position: 'conveyor_1'
                 }
             case 'conveyor_1':
