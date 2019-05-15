@@ -8,53 +8,57 @@ import { ADD_INGREDIENT } from '../actions/ingredients';
 // Он поможет понять, какие значения должен возвращать редьюсер.
 
 export default (state = [], action) => {
-  console.log( action, state )
-  switch (action.type) {
-    case CREATE_NEW_ORDER:
-      const { id, recipe } = action.payload
-      return [
-        ...state,
-        {
-            id: id,
+    console.log( action, state )
+    switch (action.type) {
+        case CREATE_NEW_ORDER:
+            const { id, recipe } = action.payload
+            return [
+                ...state,
+                {
+                id: id,
                 ingredients: [],
-            recipe: recipe,
-            position: 'clients'
-        }
-      ]
-    case MOVE_ORDER_NEXT:
-      const { position } = state[0]
-      console.log( 'move-order', position )
-        switch ( position ) {
-            case 'clients':
-                return {
-                    ...state,
-                    position: 'conveyor_1'
+                recipe: recipe,
+                position: 'clients'
                 }
-            case 'conveyor_1':
-                return {
-                    ...state,
-                    position: 'conveyor_2'
-                }
-            case 'conveyor_2':
-                return {
-                    ...state,
-                    position: 'conveyor_3'
-                }
-            case 'conveyor_3':
-                return {
-                    ...state,
-                    position: 'conveyor_4'
-                }
-            default:
-                return 'clients'
-        }
-    case ADD_INGREDIENT:
-      return[
-        ...state
-      ]
-    default:
-      return state;
-  }
+            ]
+        case MOVE_ORDER_NEXT:
+            const { position } = state[0]
+            console.log( 'move-order', position )
+            switch ( position ) {
+                case 'clients':
+                    return {
+                        ...state,
+                        position: 'conveyor_1'
+                    }
+                case 'conveyor_1':
+                    return {
+                        ...state,
+                        position: 'conveyor_2'
+                    }
+                case 'conveyor_2':
+                    return {
+                        ...state,
+                        position: 'conveyor_3'
+                    }
+                case 'conveyor_3':
+                    return {
+                        ...state,
+                        position: 'conveyor_4'
+                    }
+                default:
+                    return 'clients'
+            }
+        case MOVE_ORDER_BACK:
+            return[
+                ...state
+            ]
+        case ADD_INGREDIENT:
+            return[
+                ...state
+            ]
+        default:
+            return state;
+    }
 };
 
 export const getOrdersFor = (state, position) =>
