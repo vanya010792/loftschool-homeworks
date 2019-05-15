@@ -22,42 +22,93 @@ export default ( state = [], action ) => {
                 }
             ]
         case MOVE_ORDER_NEXT:
-            const position = state.map( item => item.position ).toString()
-            console.log( 'move-order', position )
-            switch ( position ) {
-                case 'clients':
-                    return [
-                        ...state,
-                        {
-                            position: 'conveyor_1'
-                        }
-                    ]
-                case 'conveyor_1':
-                    return {
-                        ...state,
-                        position: 'conveyor_2'
+            return state.map( item => {
+                if( item.id === action.payload ) {
+                    switch ( item.position ) {
+                        case 'clients':
+                            return {
+                                ...item,
+                                position: 'conveyor_1'
+                            }
+                        case 'conveyor_1':
+                            return {
+                                ...item,
+                                position: 'conveyor_2'
+                            }
+                        case 'conveyor_2':
+                            return {
+                                ...item,
+                                position: 'conveyor_3'
+                            }
+                        case 'conveyor_3':
+                            return {
+                                ...item,
+                                position: 'conveyor_4'
+                            }
+                        case 'conveyor_4':
+                            if( item.ingredients.length === item.recipe.length ) {
+                                return {
+                                    ...item,
+                                    position: 'finish'
+                                }
+                            } else {
+                                return { ...item }
+                            }
+                        default:
+                            return { ...item }
                     }
-                case 'conveyor_2':
-                    return {
-                        ...state,
-                        position: 'conveyor_3'
-                    }
-                case 'conveyor_3':
-                    return {
-                        ...state,
-                        position: 'conveyor_4'
-                    }
-                default:
-                    return 'clients'
-            }
+                } else {
+                    return { ...item }
+                }
+            })
         case MOVE_ORDER_BACK:
-            return[
-                ...state
-            ]
+            return state.map( item => {
+                if( item.id === action.payload ) {
+                    switch ( item.position ) {
+                        case 'conveyor_2':
+                            return {
+                                ...item,
+                                position: 'conveyor_1'
+                            }
+                        case 'conveyor_3':
+                            return {
+                                ...item,
+                                position: 'conveyor_2'
+                            }
+                        case 'conveyor_4':
+                            return {
+                                ...item,
+                                position: 'conveyor_3'
+                            }
+                        default:
+                            return { ...item }
+                    }
+                } else {
+                    return { ...item }
+                }
+            })
         case ADD_INGREDIENT:
-            return[
-                ...state
-            ]
+            return state.map( item => {
+                if( action.payload.from === item.position ) {
+                    const questionIng = item.ingredients.filter(ing => ing === action.payload.ingredient).toString()
+                    if( questionIng === '' ) {
+                        const addIng = item.recipe.filter(ing => ing === action.payload.ingredient).toString()
+                        console.log('questionIng', questionIng)
+                        if ( addIng !== '' ) {
+                            return {
+                                ...item,
+                                ingredients: [...item.ingredients, action.payload.ingredient]
+                            }
+                        } else {
+                            return {...item}
+                        }
+                    } else {
+                        return { ...item }
+                    }
+                } else {
+                    return {...item}
+                }
+            })
         default:
             return state;
     }
