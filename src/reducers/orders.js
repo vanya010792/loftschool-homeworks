@@ -7,29 +7,31 @@ import { ADD_INGREDIENT } from '../actions/ingredients';
 // Обратите внимание на `orders.test.js`.
 // Он поможет понять, какие значения должен возвращать редьюсер.
 
-export default (state = [], action) => {
+export default ( state = [], action ) => {
     console.log( action, state )
-    switch (action.type) {
+    switch ( action.type ) {
         case CREATE_NEW_ORDER:
             const { id, recipe } = action.payload
             return [
                 ...state,
                 {
-                id: id,
-                ingredients: [],
-                recipe: recipe,
-                position: 'clients'
+                    id: id,
+                    ingredients: [],
+                    recipe: recipe,
+                    position: 'clients'
                 }
             ]
         case MOVE_ORDER_NEXT:
-            const { position } = state[0]
+            const position = state.map( item => item.position ).toString()
             console.log( 'move-order', position )
             switch ( position ) {
                 case 'clients':
-                    return {
+                    return [
                         ...state,
-                        position: 'conveyor_1'
-                    }
+                        {
+                            position: 'conveyor_1'
+                        }
+                    ]
                 case 'conveyor_1':
                     return {
                         ...state,
